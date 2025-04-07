@@ -11,6 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +21,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "api/v1/client")
+@Tag(name = "Clientes", description = "API para gestionar clientes")
 public class ClientController {
     @Autowired
     private ClientService clientService;
